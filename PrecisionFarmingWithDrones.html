@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Precision Farming with Drones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Advanced Precision Farming with Drones</h1>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button onclick="startPathfinding()">Start Pathfinding</button>
+            <button onclick="clearGrid()">Clear Grid</button>
+            <button onclick="toggleObstacleMode()">Toggle Obstacle Mode</button>
+        </div>
+
+        <!-- Farm Map -->
+        <div id="farm-map"></div>
+
+        <!-- Path Info Section -->
+        <div class="path-info">
+            <h2>Pathfinding Information</h2>
+            <p>Drone Path:</p>
+            <pre id="pathOutput"></pre>
+        </div>
+    </div>
+
+    <!-- Drone Settings Modal -->
+    <div id="settings-modal" class="settings-modal">
+        <div class="modal-content">
+            <h2>Drone Settings</h2>
+            <label for="droneSpeed">Drone Speed:</label>
+            <input type="number" id="droneSpeed" value="100" min="10" max="500">
+            <button onclick="closeSettingsModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
